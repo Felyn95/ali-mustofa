@@ -32,3 +32,44 @@
 .spot-card-content a{display:inline-flex;gap:12px;margin-top:14px;color:#83b7ff;font-size:12px;font-weight:700}
 .spot-note{margin-top:22px;padding:16px 18px;background:#111b2c;border-left:3px solid #79aaff;color:#aab5c8;font-size:12px;line-height:1.7}
 @media(max-width:650px){.spot-grid{grid-template-columns:1fr}.spot-card>img{height:190px}.spot-card-content{padding:18px}}
+
+/* v12: compact, balanced Fishing Spots cards */
+.spot-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;align-items:stretch}
+.spot-card{display:flex;flex-direction:column;min-width:0;border-radius:14px;overflow:hidden;background:linear-gradient(145deg,#111d30,#0d1422);border:1px solid rgba(145,177,224,.18);box-shadow:0 16px 40px rgba(0,0,0,.18)}
+.spot-card>img{width:100%;height:210px;object-fit:cover;display:block}
+.spot-card-content{padding:22px;display:flex;flex-direction:column;flex:1;align-items:flex-start}
+.spot-card-content h3{font:600 25px "Space Grotesk";margin:7px 0 5px;color:#f3f6ff}
+.spot-card-content .eyebrow{font-size:9px;letter-spacing:1.7px;color:#82b4ff}
+.spot-card-content p:not(.eyebrow){color:#b4c0d3;line-height:1.75;font-size:13px;margin:8px 0}
+.spot-card-content a{display:inline-flex;align-items:center;gap:12px;margin-top:auto;padding-top:15px;color:#8abaff;font-size:12px;font-weight:700}
+.spot-card-content a:hover{color:#fff}
+.spot-note{margin-top:24px;padding:16px 18px;background:rgba(17,27,44,.85);border:1px solid rgba(145,177,224,.16);border-left:3px solid #79aaff;border-radius:8px;color:#b4c0d3;font-size:12px;line-height:1.75}
+@media(max-width:650px){
+  .spot-grid{grid-template-columns:1fr;gap:18px}
+  .spot-card{display:grid;grid-template-columns:42% 1fr;min-height:0}
+  .spot-card>img{height:100%;min-height:230px;max-height:300px;object-fit:cover}
+  .spot-card-content{padding:16px 14px}
+  .spot-card-content h3{font-size:20px}
+  .spot-card-content p:not(.eyebrow){font-size:12px;line-height:1.6}
+  .spot-card-content a{font-size:11px;padding-top:10px}
+  .spot-note{font-size:11px;padding:13px}
+}
+@media(max-width:390px){
+  .spot-card{grid-template-columns:1fr}
+  .spot-card>img{height:170px;min-height:170px;max-height:170px;width:100%}
+  .spot-card-content{padding:16px}
+}
+
+/* v13: embedded interactive maps for fishing spot discovery */
+.spot-map-wrap{margin-top:42px}
+.spot-map-heading{margin-bottom:20px}
+.spot-map-heading h3{font:600 clamp(25px,4vw,34px) "Space Grotesk";margin:8px 0}
+.spot-map-heading h3 span{color:#83b7ff}
+.spot-map-heading .muted{font-size:13px;line-height:1.7;max-width:620px}
+.spot-map-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.spot-map-card{overflow:hidden;background:#101a2b;border:1px solid rgba(145,177,224,.18);border-radius:12px}
+.spot-map-label{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:15px 17px}
+.spot-map-label strong{font:600 15px "Space Grotesk";color:#f3f6ff}
+.spot-map-label a{font-size:11px;color:#8abaff;font-weight:700}
+.spot-map-card iframe{display:block;width:100%;height:260px;border:0;background:#101a2b}
+@media(max-width:650px){.spot-map-grid{grid-template-columns:1fr;gap:16px}.spot-map-card iframe{height:230px}.spot-map-label{padding:14px}}
