@@ -1,8 +1,4 @@
 const toggle=document.querySelector('.menu-toggle');const nav=document.querySelector('.nav');toggle.addEventListener('click',()=>{const open=nav.classList.toggle('open');toggle.setAttribute('aria-expanded',open?'true':'false');toggle.textContent=open?'×':'☰'});document.querySelectorAll('.nav a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');toggle.setAttribute('aria-expanded','false');toggle.textContent='☰'}));const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target)}}),{threshold:.12});document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));document.getElementById('year').textContent=new Date().getFullYear();
-// v17: detail metadata is read from each gallery card data-* attribute.
-// Owner workflow: add a new .catch-card in index.html, upload its original image to the repository,
-// then fill data-title, data-description, data-image, data-species, data-weight, data-date,
-// data-location, data-technique, and data-bait. No public upload endpoint or visitor form exists.
 // v16: accessible catch-photo detail modal and native website sharing
 (() => {
   const modal = document.getElementById('catch-modal');
@@ -11,7 +7,14 @@ const toggle=document.querySelector('.menu-toggle');const nav=document.querySele
   const description = document.getElementById('catch-modal-description');
   const image = document.getElementById('catch-modal-image');
   const meta = document.getElementById('catch-modal-meta');
-  const fields = [['Jenis ikan', 'species'], ['Berat', 'weight'], ['Tanggal', 'date'], ['Lokasi', 'location'], ['Teknik', 'technique'], ['Umpan', 'bait']];
+  const fields = [
+    ['Jenis ikan', 'species'],
+    ['Berat', 'weight'],
+    ['Tanggal', 'date'],
+    ['Lokasi', 'location'],
+    ['Teknik', 'technique'],
+    ['Umpan', 'bait']
+  ];
   const openModal = (card) => {
     title.textContent = card.dataset.title || 'Fishing Catch';
     description.textContent = card.dataset.description || '';
@@ -20,13 +23,13 @@ const toggle=document.querySelector('.menu-toggle');const nav=document.querySele
     if (meta) {
       meta.replaceChildren();
       fields.forEach(([label, key]) => {
-        const row = document.createElement('div');
+        const item = document.createElement('div');
         const term = document.createElement('dt');
         const value = document.createElement('dd');
         term.textContent = label;
-        value.textContent = card.dataset[key]?.trim() || 'Belum diisi';
-        row.append(term, value);
-        meta.append(row);
+        value.textContent = card.dataset[key] || 'Belum diisi';
+        item.append(term, value);
+        meta.append(item);
       });
     }
     modal.classList.add('open');
