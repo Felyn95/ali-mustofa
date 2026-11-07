@@ -73,3 +73,24 @@
 .spot-map-label a{font-size:11px;color:#8abaff;font-weight:700}
 .spot-map-card iframe{display:block;width:100%;height:260px;border:0;background:#101a2b}
 @media(max-width:650px){.spot-map-grid{grid-template-columns:1fr;gap:16px}.spot-map-card iframe{height:230px}.spot-map-label{padding:14px}}
+
+/* v14: polished interactive map cards */
+.spot-map-wrap{margin-top:48px}
+.spot-map-heading{margin-bottom:24px}
+.spot-map-heading h3{margin:8px 0 12px}
+.spot-map-heading .muted{max-width:650px;line-height:1.75}
+.spot-map-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;align-items:stretch}
+.spot-map-card{min-width:0;overflow:hidden;border:1px solid rgba(145,177,224,.2);border-radius:14px;background:linear-gradient(145deg,#111d30,#0c1422);box-shadow:0 16px 38px rgba(0,0,0,.2)}
+.spot-map-label{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px 14px;padding:17px 18px}
+.spot-map-label strong{display:block;font:600 17px "Space Grotesk",sans-serif;color:#f3f6ff}
+.spot-map-label a{display:inline-flex;align-items:center;gap:7px;padding:9px 12px;border:1px solid rgba(130,180,255,.35);border-radius:999px;color:#91bdff;font-size:11px;font-weight:700;white-space:nowrap}
+.spot-map-label a:hover{background:rgba(130,180,255,.12);color:#fff}
+.spot-map-card iframe{display:block;width:100%;height:245px;border:0;background:#101a2b}
+@media(max-width:650px){
+  .spot-map-wrap{margin-top:36px}
+  .spot-map-grid{grid-template-columns:1fr;gap:18px}
+  .spot-map-label{padding:15px 16px}
+  .spot-map-label strong{font-size:16px}
+  .spot-map-label a{padding:8px 11px}
+  .spot-map-card iframe{height:220px}
+}
