@@ -14,3 +14,10 @@
 
 .video-feature{display:grid;grid-template-columns:minmax(240px,.75fr) 1fr;gap:30px;align-items:center;padding:24px;background:#101a2b;border:1px solid #ffffff18}.video-frame{width:100%;max-width:360px;margin:auto;aspect-ratio:9/16;background:#05080e;overflow:hidden;border-radius:12px}.video-frame iframe{width:100%;height:100%;border:0}.video-caption h3{font:600 25px "Space Grotesk";margin:12px 0}.video-caption .btn{margin-top:10px}
 @media(max-width:650px){.video-feature{grid-template-columns:1fr;padding:16px}.video-frame{max-width:280px}.video-caption{text-align:center}.video-caption .eyebrow{text-align:center}}
+
+/* Fishing portfolio refinements */
+.gallery-grid{grid-template-columns:1.3fr 1fr 1fr;grid-template-rows:170px 170px}
+.gallery-grid .tile-large{grid-row:span 2}
+.gallery-grid .tile-two,.gallery-grid .tile-three{grid-column:auto;grid-row:auto}
+.skill-icon{font-size:25px}
+@media(max-width:650px){.gallery-grid{grid-template-columns:1.2fr 1fr;grid-template-rows:145px 145px}.gallery-grid .tile-large{grid-row:span 2}.gallery-grid .tile-two,.gallery-grid .tile-three{grid-column:auto;grid-row:auto}}
