@@ -21,3 +21,14 @@
 .gallery-grid .tile-two,.gallery-grid .tile-three{grid-column:auto;grid-row:auto}
 .skill-icon{font-size:25px}
 @media(max-width:650px){.gallery-grid{grid-template-columns:1.2fr 1fr;grid-template-rows:145px 145px}.gallery-grid .tile-large{grid-row:span 2}.gallery-grid .tile-two,.gallery-grid .tile-three{grid-column:auto;grid-row:auto}}
+
+/* Fishing Spots section */
+.spot-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+.spot-card{background:#101a2b;border:1px solid #ffffff18;overflow:hidden}
+.spot-card>img{width:100%;height:230px;object-fit:cover;display:block}
+.spot-card-content{padding:22px}
+.spot-card-content h3{font:600 25px "Space Grotesk";margin:8px 0}
+.spot-card-content p:not(.eyebrow){color:#aab5c8;line-height:1.75;font-size:13px}
+.spot-card-content a{display:inline-flex;gap:12px;margin-top:14px;color:#83b7ff;font-size:12px;font-weight:700}
+.spot-note{margin-top:22px;padding:16px 18px;background:#111b2c;border-left:3px solid #79aaff;color:#aab5c8;font-size:12px;line-height:1.7}
+@media(max-width:650px){.spot-grid{grid-template-columns:1fr}.spot-card>img{height:190px}.spot-card-content{padding:18px}}
