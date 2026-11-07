@@ -131,11 +131,9 @@
 .catch-modal-close{position:absolute;top:10px;right:10px;width:40px;height:40px;border:0;border-radius:50%;background:#0b1220;color:white;font-size:27px;cursor:pointer}
 @media(max-width:650px){.share-box{padding:22px}.share-actions{flex-direction:column;align-items:stretch}.share-actions .btn{justify-content:center}.catch-modal{padding:12px}.catch-modal-dialog>img{max-height:58vh}}
 
-
-/* v17: structured catch metadata in the detail modal */
-.catch-meta{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:18px 0 8px}
-.catch-meta>div{padding:12px 14px;background:#0b1422;border:1px solid rgba(145,177,224,.14);border-radius:9px;min-width:0}
-.catch-meta dt{font-size:9px;letter-spacing:1.3px;text-transform:uppercase;color:#83b7ff;margin-bottom:5px}
-.catch-meta dd{margin:0;color:#f3f6ff;font-size:13px;line-height:1.5;overflow-wrap:anywhere}
-.catch-modal-copy .catch-modal-hint{margin-top:15px}
-@media(max-width:480px){.catch-meta{grid-template-columns:1fr 1fr;gap:8px}.catch-meta>div{padding:10px}}
+/* v17 catch metadata grid */
+.catch-modal-meta{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:18px 0}
+.catch-modal-meta>div{min-width:0;padding:13px 14px;background:#0b1424;border:1px solid rgba(145,177,224,.16);border-radius:12px}
+.catch-modal-meta dt{margin:0 0 7px;color:#82aeea;font-size:10px;letter-spacing:.14em;text-transform:uppercase}
+.catch-modal-meta dd{margin:0;color:#f3f6ff;font-size:14px;line-height:1.5;overflow-wrap:anywhere}
+@media(max-width:420px){.catch-modal-meta{gap:8px}.catch-modal-meta>div{padding:11px}.catch-modal-meta dd{font-size:13px}}
