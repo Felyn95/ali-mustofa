@@ -86,15 +86,15 @@
         <p class="muted">Beberapa momen hasil tangkapan dari perjalanan memancing Ali Mustofa.</p>
       </div>
       <div class="catch-grid">
-        <article class="catch-card reveal">
+        <article class="catch-card reveal catch-open" tabindex="0" role="button" aria-label="Lihat detail foto hasil tangkapan 1" data-title="Night Fishing Catch" data-description="Dokumentasi hasil tangkapan dalam sesi memancing malam." data-image="fishing-catch-01.jpg">
           <img src="fishing-catch-01.jpg" alt="Momen hasil tangkapan ikan saat memancing" loading="lazy">
           <div class="catch-info"><p class="eyebrow">CATCH MOMENT 01</p><h3>Night Fishing Catch</h3><p>Dokumentasi hasil tangkapan dalam sesi memancing malam.</p></div>
         </article>
-        <article class="catch-card reveal">
+        <article class="catch-card reveal catch-open" tabindex="0" role="button" aria-label="Lihat detail foto hasil tangkapan 2" data-title="Coastal Fishing" data-description="Momen mendapatkan ikan di area pesisir." data-image="fishing-catch-02.jpg">
           <img src="fishing-catch-02.jpg" alt="Hasil tangkapan ikan di pesisir" loading="lazy">
           <div class="catch-info"><p class="eyebrow">CATCH MOMENT 02</p><h3>Coastal Fishing</h3><p>Momen mendapatkan ikan di area pesisir.</p></div>
         </article>
-        <article class="catch-card reveal">
+        <article class="catch-card reveal catch-open" tabindex="0" role="button" aria-label="Lihat detail foto hasil tangkapan 3" data-title="Shore Fishing" data-description="Catatan perjalanan dan pengalaman memancing dari tepi pantai." data-image="fishing-catch-03.jpg">
           <img src="fishing-catch-03.jpg" alt="Dokumentasi hasil memancing di pantai" loading="lazy">
           <div class="catch-info"><p class="eyebrow">CATCH MOMENT 03</p><h3>Shore Fishing</h3><p>Catatan perjalanan dan pengalaman memancing dari tepi pantai.</p></div>
         </article>
@@ -147,6 +147,28 @@
       <p class="contact-note">Ikuti akun TikTok @ali.mustofa93 untuk melihat video dan aktivitas memancing terbaru.</p></div>
     </section>
   </main>
+
+    <section class="section share-section" aria-label="Bagikan website">
+      <div class="share-box">
+        <p class="eyebrow">SHARE THE ADVENTURE</p>
+        <h2>Share this <span>website.</span></h2>
+        <p class="muted">Bagikan portfolio dan cerita memancing ALI MUSTOFA kepada teman-teman.</p>
+        <div class="share-actions">
+          <button class="btn primary" id="native-share" type="button">Bagikan Website ↗</button>
+          <a class="btn secondary" href="https://wa.me/?text=https%3A%2F%2Ffelyn95.github.io%2Fali-mustofa%2F" target="_blank" rel="noopener noreferrer">WhatsApp ↗</a>
+          <a class="btn secondary" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ffelyn95.github.io%2Fali-mustofa%2F" target="_blank" rel="noopener noreferrer">Facebook ↗</a>
+        </div>
+      </div>
+    </section>
+    <div class="catch-modal" id="catch-modal" aria-hidden="true">
+      <div class="catch-modal-backdrop" data-close-modal></div>
+      <div class="catch-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="catch-modal-title">
+        <button class="catch-modal-close" type="button" aria-label="Tutup" data-close-modal>×</button>
+        <img id="catch-modal-image" src="" alt="">
+        <div class="catch-modal-copy"><p class="eyebrow">FISHING CATCH DETAIL</p><h2 id="catch-modal-title"></h2><p id="catch-modal-description"></p><p class="catch-modal-hint">Detail jenis ikan, berat, tanggal, dan lokasi dapat dilengkapi setelah datanya dikonfirmasi.</p></div>
+      </div>
+    </div>
+
   <footer><a class="brand" href="#home"><img src="ali-mustofa-logo.jpg" alt="Logo Ali Mustofa"><span>ALI MUSTOFA</span></a><p>© <span id="year"></span> Ali Mustofa. Made with purpose.</p><a href="https://www.tiktok.com/@ali.mustofa93" target="_blank" rel="noopener noreferrer">TIKTOK ↗</a><a href="#home">BACK TO TOP ↑</a></footer>
   <script src="script.js"></script>
 </body>

@@ -107,3 +107,26 @@
 .facebook-link .social-mark{display:inline-grid;place-items:center;width:18px;height:18px;border-radius:50%;background:#1877f2;color:white;font-weight:800;font-family:Arial,sans-serif}
 @media(max-width:650px){.catch-grid{grid-template-columns:1fr}.catch-card{display:grid;grid-template-columns:38% 1fr}.catch-card img{height:100%;min-height:150px}.catch-info{padding:14px}.catch-info h3{font-size:17px}}
 @media(max-width:390px){.catch-card{grid-template-columns:1fr}.catch-card img{height:190px;min-height:190px}}
+
+/* v16: catch photo lightbox and share tools */
+.catch-open{cursor:pointer;transition:transform .22s ease,border-color .22s ease}
+.catch-open:hover{transform:translateY(-4px);border-color:rgba(130,180,255,.55)}
+.catch-open:focus-visible{outline:2px solid #83b7ff;outline-offset:4px}
+.share-section{padding-top:10px}
+.share-box{padding:30px;background:linear-gradient(135deg,#111d30,#172b49);border:1px solid rgba(145,177,224,.2);border-radius:14px}
+.share-box h2{font:600 clamp(28px,5vw,42px) "Space Grotesk";margin:8px 0 12px;color:#f3f6ff}
+.share-box h2 span{color:#83b7ff}
+.share-box .muted{max-width:620px;line-height:1.7}
+.share-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:20px}
+.share-actions button{font:inherit;cursor:pointer}
+.catch-modal{position:fixed;inset:0;z-index:9999;display:none;align-items:center;justify-content:center;padding:20px}
+.catch-modal.open{display:flex}
+.catch-modal-backdrop{position:absolute;inset:0;background:rgba(2,6,14,.88);backdrop-filter:blur(7px)}
+.catch-modal-dialog{position:relative;z-index:1;width:min(760px,100%);max-height:90vh;overflow:auto;background:#101a2b;border:1px solid rgba(145,177,224,.25);border-radius:14px;box-shadow:0 25px 80px #0009}
+.catch-modal-dialog>img{display:block;width:100%;max-height:65vh;object-fit:contain;background:#070d18}
+.catch-modal-copy{padding:22px}
+.catch-modal-copy h2{font:600 26px "Space Grotesk";margin:6px 0 10px;color:#f3f6ff}
+.catch-modal-copy p{color:#b4c0d3;line-height:1.7;font-size:13px}
+.catch-modal-copy .catch-modal-hint{font-size:11px;color:#8291a8}
+.catch-modal-close{position:absolute;top:10px;right:10px;width:40px;height:40px;border:0;border-radius:50%;background:#0b1220;color:white;font-size:27px;cursor:pointer}
+@media(max-width:650px){.share-box{padding:22px}.share-actions{flex-direction:column;align-items:stretch}.share-actions .btn{justify-content:center}.catch-modal{padding:12px}.catch-modal-dialog>img{max-height:58vh}}
