@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://felyn95.github.io/ali-mustofa/sitemap.xml
